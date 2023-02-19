@@ -1,12 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage('Clone repository'){
-            steps{
-                git branch: 'main',
-                url: 'https://github.com/SR42-dev/pes1ug20cs435-jenkins'
-            }
-        }
         stage('Build application'){
             steps{
                 script{
