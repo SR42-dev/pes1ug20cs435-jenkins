@@ -12,7 +12,7 @@ pipeline{
         stage('Test application'){
             steps{
                 script{
-                    ./hello_exec
+                    sh './hello_exec'
                     echo 'Application tested'
                 }
             }
