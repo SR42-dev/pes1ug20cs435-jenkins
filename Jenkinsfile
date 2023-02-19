@@ -10,7 +10,7 @@ pipeline{
         stage('Build application'){
             steps{
                 script{
-                    sh 'cmake main/Makefile',
+                    sh 'make',
                     echo 'Application built'
                 }
             }
@@ -18,7 +18,7 @@ pipeline{
         stage('Test application'){
             steps{
                 script{
-                    /var/jenkins_home/workspace/pes1ug20cs435/main/hello_exec
+                    ./hello_exec
                     echo 'Application tested'
                 }
             }
@@ -26,8 +26,6 @@ pipeline{
         stage('Deploy application'){
             steps{
                 script{
-                    docker build -t pes1ug20cs435 .
-                    docker run -d pes1ug20cs435
                     echo 'Application deployed'
                 }
             }   
