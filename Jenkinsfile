@@ -10,7 +10,6 @@ pipeline{
         stage('Build application'){
             steps{
                 script{
-                    sh 'cmake -C /var/jenkins_home/workspace/pes1ug20cs435/main',
                     echo 'Application built'
                 }
             }
