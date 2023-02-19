@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build application'){
             steps{
-                    sh 'make main',
+                    sh 'make -C main',
                     echo 'Application built'
             }
         }
