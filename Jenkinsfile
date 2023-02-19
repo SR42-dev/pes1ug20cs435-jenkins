@@ -3,13 +3,13 @@ pipeline{
     stages{
         stage('Build application'){
             steps{
-                    sh 'make',
+                    sh 'make main',
                     echo 'Application built'
             }
         }
         stage('Test application'){
             steps{
-                    sh './hello_exec'
+                    sh './main/hello_exec'
                     echo 'Application tested'
             }
         }
