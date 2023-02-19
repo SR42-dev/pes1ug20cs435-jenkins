@@ -18,7 +18,7 @@ pipeline{
         stage('Test application'){
             steps{
                 script{
-                    ./hello_exec
+                    /var/jenkins_home/workspace/pes1ug20cs435/main/hello_exec
                     echo 'Application tested'
                 }
             }
