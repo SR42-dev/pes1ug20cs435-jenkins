@@ -3,25 +3,18 @@ pipeline{
     stages{
         stage('Build application'){
             steps{
-                script{
-                    make -C main,
-                    echo 'Application built'
-                }
+                sh 'make -C main'
+                    
             }
         }
         stage('Test application'){
             steps{
-                script{
-                    ./main/hello_exec,
-                    echo 'Application tested'
-                }
+                    sh './main/hello_exec'
             }
         }
         stage('Deploy application'){
             steps{
-                script{
-                    echo 'Application deployed'
-                }
+                echo 'Application deployed'
             }   
         }
     }
