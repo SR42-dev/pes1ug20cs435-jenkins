@@ -9,21 +9,27 @@ pipeline{
         }
         stage('Build application'){
             steps{
-                sh 'make -C main',
-                echo 'Application built'
+                script{
+                    sh 'make -C main',
+                    echo 'Application built'
+                }
             }
         }
         stage('Test application'){
             steps{
-                /var/jenkins_home/workspace/pes1ug20cs435-1/main/hello_exec
-                echo 'Application tested'
+                script{
+                    /var/jenkins_home/workspace/pes1ug20cs435-1/main/hello_exec
+                    echo 'Application tested'
+                }
             }
         }
         stage('Deploy application'){
             steps{
-                docker build -t pes1ug20cs435-1 .
-                docker run -d pes1ug20cs435-1
-                echo 'Application deployed'
+                script{
+                    docker build -t pes1ug20cs435-1 .
+                    docker run -d pes1ug20cs435-1
+                    echo 'Application deployed'
+                }
             }   
         }
     }
