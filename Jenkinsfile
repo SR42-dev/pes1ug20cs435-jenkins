@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Build application'){
             steps{
-                make -C main,
+                sh 'make -C main',
                 echo 'Application built'
             }
         }
