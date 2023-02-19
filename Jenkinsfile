@@ -22,7 +22,7 @@ pipeline{
         stage('Deploy application'){
             steps{
                 docker build -t pes1ug20cs435-1 .
-                docker run -d -p 8080:8080 pes1ug20cs435-1
+                docker run -d pes1ug20cs435-1
                 echo 'Application deployed'
             }   
         }
