@@ -10,7 +10,7 @@ pipeline{
         stage('Build application'){
             steps{
                 script{
-                    sh 'cmake main',
+                    sh 'cmake -C main',
                     echo 'Application built'
                 }
             }
