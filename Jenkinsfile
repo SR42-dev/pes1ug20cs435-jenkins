@@ -4,7 +4,7 @@ pipeline{
         stage('Build application'){
             steps{
                 script{
-                    sh 'make -C main',
+                    make -C main,
                     echo 'Application built'
                 }
             }
@@ -12,7 +12,7 @@ pipeline{
         stage('Test application'){
             steps{
                 script{
-                    sh './main/hello_exec'
+                    ./main/hello_exec,
                     echo 'Application tested'
                 }
             }
