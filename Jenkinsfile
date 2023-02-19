@@ -10,7 +10,7 @@ pipeline{
         stage('Build application'){
             steps{
                 script{
-                    sh 'make -C /var/jenkins_home/workspace/pes1ug20cs435/main',
+                    sh 'make -C main',
                     echo 'Application built'
                 }
             }
@@ -18,7 +18,7 @@ pipeline{
         stage('Test application'){
             steps{
                 script{
-                    /var/jenkins_home/workspace/pes1ug20cs435/main/hello_exec
+                    ./hello_exec
                     echo 'Application tested'
                 }
             }
