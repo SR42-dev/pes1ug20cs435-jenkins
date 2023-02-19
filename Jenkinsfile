@@ -10,7 +10,7 @@ pipeline{
         stage('Build application'){
             steps{
                 script{
-                    sh 'make -C main',
+                    sh 'g++ -o main/hello_exec main/hello.cpp',
                     echo 'Application built'
                 }
             }
